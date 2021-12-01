@@ -1,0 +1,118 @@
+@media screen and (max-width: 620px) {
+
+
+    .navbar {
+        width: 100%;
+        z-index: -1 !important;
+        left: 0;
+        background: white;
+        position: absolute;
+        display: block;
+        /* box-shadow: 0px 2px 10px 2px rgb(10, 10, 10); */
+        /* This trasform moves the drawer off canvas. */
+        transform: translate(0, 78%);
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+    }
+
+    .linkmenus {
+        z-index: 2 !important;
+    }
+
+    .header {
+        position: relative;
+        max-height: 77.875px;
+        min-height: 77.875px;
+    }
+
+    .header__brand {
+        text-align: center;
+        margin: 0 auto;
+        padding: 5% 0;
+
+    }
+
+    .active a {
+        color: black !important;
+    }
+
+    .navbar ul li {
+        display: inline-block;
+
+    }
+
+    .navbar ul li a {
+        color: var(--secondblack);
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .open {
+        transform: translate(0, -45px);
+    }
+
+    .hero {
+        min-height: 280px;
+        z-index: -2 !important;
+    }
+
+    /* .hero__inner {
+        text-align: center;
+        margin: 0 auto;
+    } */
+
+    .hero__title {
+        font-size: 2em;
+    }
+
+    .hero__tagline {
+        font-size: 1em;
+
+    }
+
+    /* .notreserveflex {
+        flex-direction: column !important;
+    } */
+
+    .sectiondetail__content {
+
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (min-width: 620px) {
+    .allitem {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+}
+
+@media screen and (min-width: 1000px) {
+    .allitem {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 621px) {
+    .header {
+        box-shadow: 0px 2px 10px 2px rgb(10, 10, 10);
+    }
+
+    .tooglemenu {
+        display: none;
+    }
+
+    .navbar ul {
+        padding: 0px;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+
+}
