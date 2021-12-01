@@ -20,16 +20,13 @@ const Favorite = {
     const sectionTitle = document.querySelector('.section__title');
     sectionTitle.innerHTML = 'Restoran Favorite Anda';
   },
-  async isFavoriteEmpty(lengthRestaurant) {
-    return lengthRestaurant === 0;
-  },
 
   async afterRender() {
     try {
       const listRestaurant = await FavoriteRestaurantIDB.getAllRestaurants();
       const listRestaurantContainer = document.querySelector('app-listcard');
       this.changeTitle();
-      if (this.isFavoriteEmpty(listRestaurant.length)) {
+      if (listRestaurant.length === 0) {
         this.fallbackResults('Anda belum mempunyai restoran Favorite');
       } else {
         listRestaurantContainer.items = listRestaurant;
