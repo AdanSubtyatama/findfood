@@ -1,5 +1,6 @@
 import FavoriteRestaurantIDB from '../../data/FavoriteRestaurantIDB';
 import '../components/AppListCard';
+import SkiptoContentInitiator from '../../utils/SkiptoContentInitiator';
 
 const Favorite = {
 
@@ -34,6 +35,10 @@ const Favorite = {
     } catch (event) {
       this.fallbackResults('Maaf, terjadi kesalahan dalam menampilkan data');
     }
+    SkiptoContentInitiator.init({
+      button: document.querySelector('.goto__content'),
+      maincontent: document.querySelector('#maincontent'),
+    });
   },
 };
 

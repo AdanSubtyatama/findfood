@@ -2,6 +2,7 @@ import UrlParser from '../../routes/URLParser';
 import RestaurantDBSource from '../../data/RestaurantDBSource';
 import '../components/AppDetail';
 import LikeButtonInitiator from '../../utils/LikeButtonInitiator';
+import SkiptoContentInitiator from '../../utils/SkiptoContentInitiator';
 
 const Detail = {
   fallbackResults(message) {
@@ -46,6 +47,10 @@ const Detail = {
     } catch {
       this.fallbackResults('Error');
     }
+    SkiptoContentInitiator.init({
+      button: document.querySelector('.goto__content'),
+      maincontent: document.querySelector('#maincontent'),
+    });
   },
 };
 export default Detail;

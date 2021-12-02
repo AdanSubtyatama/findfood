@@ -567,6 +567,8 @@ footer {
 .sectiondetail__content__reviewform textarea {
     padding: 0.5rem;
     margin-top: 0.5rem;
+    min-height: 44px;
+    min-width: 44px;
     width: 100%;
     display: block;
     box-sizing: border-box;
