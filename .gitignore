@@ -1,5 +1,5 @@
 *.zip
 *.txt
 node_modules
-dist
 e2e/outputs
+dist
