@@ -1,5 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import CONFIG from '../../globals/Config';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 class AppCard extends HTMLElement {
   set restaurants(restaurant) {
@@ -16,7 +18,7 @@ class AppCard extends HTMLElement {
     this.innerHTML = `
       <article class="card" tabindex="0">
                 <div class="card__image">
-                    <img tabindex="0" class="card__image__thumbnail" width="100%" src="${CONFIG.BASE_IMAGE_URL + this._restaurants.pictureId}" height="225" data-src="${this._restaurants.pictureId}" alt="gambar resto ${this._restaurants.name}t" crossorigin="anonymous">
+                    <img tabindex="0" class="card__image__thumbnail lazyload" width="100%" height="225" data-src="${CONFIG.BASE_IMAGE_URL + this._restaurants.pictureId}" alt="gambar resto ${this._restaurants.name}t" crossorigin="anonymous">
                 </div>
                 <div class="card__content">
                     <div class="card__content__title__rating">

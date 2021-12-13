@@ -3,6 +3,7 @@ import RestaurantDBSource from '../../data/RestaurantDBSource';
 import '../components/AppDetail';
 import LikeButtonInitiator from '../../utils/LikeButtonInitiator';
 import SkiptoContentInitiator from '../../utils/SkiptoContentInitiator';
+import FavoriteRestaurantIDB from '../../data/FavoriteRestaurantIDB';
 
 const Detail = {
   fallbackResults(message) {
@@ -30,6 +31,7 @@ const Detail = {
       detailRestaurant.render();
       LikeButtonInitiator.init({
         likeButton: document.querySelector('#likeButton'),
+        favoriteRestaurants: FavoriteRestaurantIDB,
         restaurant: {
           id: dataDetailRestaurant.restaurant.id,
           name: dataDetailRestaurant.restaurant.name,
